@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -19,6 +20,16 @@ export class CandidatesComponent implements OnInit {
   crew = [];
 
   constructor() { }
+
+  addToCrew(person:object){
+    if(!this.crew.includes(person)){
+      this.crew.push(person);
+    }
+  }
+
+  changeMissionName(name: string){
+    this.missionName = name;
+  }
 
   ngOnInit() {
   }
